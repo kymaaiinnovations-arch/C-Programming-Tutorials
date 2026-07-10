@@ -1,164 +1,420 @@
-# C Programming Tutorials
+# C Programming Tutorial
 
-Welcome to this beginner-friendly C programming repository. It is designed to help students learn C step by step using simple examples, practice programs, and theory materials.
+This repository contains a simple step-by-step C programming course. Each topic is explained in a beginner-friendly way with a short definition and a small example.
 
-## What You Will Learn
+---
 
-This course covers the basics of C programming, including:
+## 00 - Course Guide
 
-- Basic computer concepts
-- First C programs
-- Variables and data types
-- Operators
-- Decision making
-- Loops
-- Functions
-- Arrays
-- Strings
+### What is C?
+C is a powerful and widely used programming language. It is used for system software, embedded systems, and application development.
 
-## Folder Structure
+Example:
+```c
+#include <stdio.h>
 
-### 00-Course-Guide
-This folder contains course guidance materials such as notes and theory PDFs to support your learning.
-
-### 01-Basic-Computer
-This section introduces basic computer ideas, including:
-- ASCII table
-- Computer parts
-- Data representation
-- Input and output
-- Hello World program
-
-### 02-Programming-Fundamentals
-This folder covers the foundation of C programming, such as:
-- Comments
-- Constants
-- Variables
-- Data types
-- Identifiers and keywords
-- scanf and printf
-- Type casting
-- Swapping numbers
-
-### 03-Operators
-Here you will learn about different operators in C, including:
-- Arithmetic operators
-- Assignment operators
-- Relational operators
-- Logical operators
-- Bitwise operators
-- Increment and decrement operators
-- Ternary operator
-
-### 04-Decision-Making
-This section teaches how programs make decisions using:
-- if statement
-- if-else statement
-- nested if
-- else-if ladder
-- switch case
-- Leap year check
-- Voter eligibility
-- Electricity bill calculation
-- Grade system
-- Largest number program
-
-### 05-Loops
-This folder contains loop examples, practice programs, and pattern programs.
-
-### 06-Functions
-This section introduces functions, recursion, and practice programs.
-
-### 07-Arrays
-Here you will learn about arrays, including:
-- Array declaration
-- Array initialization
-- Array input/output
-- Sum and average of arrays
-- Largest element
-- Linear search
-- Reverse array
-- One-dimensional and two-dimensional arrays
-- Student marks and attendance programs
-
-### 08-Strings
-This folder focuses on string handling in C, including:
-- String declaration
-- String initialization
-- String input/output
-- String length
-- String copy
-- String comparison
-- String concatenation
-- String reverse
-- Student name program
-- Kyma registration program
-
-## Simple Theory Notes
-
-### What is C Programming?
-C is a powerful and popular programming language used to build software, operating systems, embedded systems, and many other applications. It is fast, efficient, and widely used in computer science.
-
-### What is a Variable?
-A variable is a name given to a memory location where data is stored. For example, an integer variable can store a number.
-
-### What are Data Types?
-Data types tell the compiler what kind of data a variable can hold. Common data types are int, float, char, and double.
-
-### What are Operators in C?
-Operators are symbols used to perform operations on data. Examples include arithmetic operators like +, -, *, / and comparison operators like == and >.
-
-### What is Decision Making?
-Decision making allows a program to choose different actions based on conditions. This is done using if, else, and switch statements.
-
-### What are Loops?
-Loops are used to repeat a block of code multiple times. They are useful when the same task needs to be done again and again.
-
-### What are Functions?
-Functions are reusable blocks of code that perform a specific task. They make programs easier to read, write, and maintain.
-
-### What is an Array?
-An array is a collection of similar data items stored under one name. It is useful when many values need to be stored together.
-
-### What is a String in C?
-A string is a sequence of characters, such as a word or a sentence. In C, a string is stored as an array of characters ending with a null character '\0'.
-
-### What are Comments?
-Comments are notes written in the code for humans to understand. They are ignored by the compiler.
-
-### What are Constants?
-Constants are values that do not change during program execution. They are fixed values such as 3.14 or 'A'.
-
-### What are Identifiers?
-Identifiers are names given to variables, functions, and arrays. They must follow certain rules in C.
-
-## How to Use This Repository
-
-1. Open any .c file in the folder you want to study.
-2. Read the code carefully.
-3. Try to understand the logic.
-4. Compile and run the program.
-5. Practice by making small changes.
-
-### Example to Compile and Run
-
-For GCC compiler:
-
-```bash
-gcc file_name.c -o file_name
-./file_name
+int main() {
+    printf("Hello, C Programming!\n");
+    return 0;
+}
 ```
 
-On Windows, you can run the generated .exe file after compiling.
+---
 
-## Beginner Tips
+## 01 - Basic Computer
 
-- Start with simple programs first.
-- Practice every day.
-- Type the code yourself instead of only copying.
-- Try to understand each line.
-- Do not worry about mistakes; they are part of learning.
+### Computer parts
+A computer is made of hardware and software. Hardware is the physical part, and software is the instructions that make the hardware work.
 
-## Conclusion
+Example:
+```c
+#include <stdio.h>
 
-This repository is a simple and structured way to learn C programming from beginner to intermediate level. Keep practicing and enjoy coding!
+int main() {
+    printf("Computer has CPU, Memory, and Storage.\n");
+    return 0;
+}
+```
+
+### Data representation
+Data is stored in computers using binary digits, 0 and 1.
+
+### ASCII table
+ASCII is a coding system that assigns numbers to characters like letters and symbols.
+
+### Input and output
+Input means receiving data from the user, and output means showing data on the screen.
+
+Example:
+```c
+#include <stdio.h>
+
+int main() {
+    int age;
+    printf("Enter your age: ");
+    scanf("%d", &age);
+    printf("You are %d years old.\n", age);
+    return 0;
+}
+```
+
+---
+
+## 02 - Programming Fundamentals
+
+### Variables
+Variables are containers used to store data in a program.
+
+Example:
+```c
+int age = 20;
+```
+
+### Data types
+Data types define the kind of data a variable can hold, such as int, float, char, and double.
+
+Example:
+```c
+int marks = 90;
+float average = 85.5;
+char grade = 'A';
+```
+
+### Comments
+Comments are notes written in the code and ignored by the compiler.
+
+Example:
+```c
+// This is a comment
+int x = 5;
+```
+
+### Constants
+Constants are values that do not change during program execution.
+
+Example:
+```c
+#define PI 3.14
+```
+
+### Identifiers
+Identifiers are the names given to variables, functions, and other elements.
+
+Example:
+```c
+int studentAge = 18;
+```
+
+### Keywords
+Keywords are reserved words in C with special meanings.
+
+Example:
+```c
+int main() {
+    return 0;
+}
+```
+
+### scanf and printf
+printf displays output, and scanf reads input from the user.
+
+### Type casting
+Type casting converts one data type into another.
+
+Example:
+```c
+int a = 5;
+float b = (float)a;
+```
+
+### Size of data types
+The sizeof operator shows how much memory a data type uses.
+
+Example:
+```c
+#include <stdio.h>
+
+int main() {
+    printf("%lu\n", sizeof(int));
+    return 0;
+}
+```
+
+---
+
+## 03 - Operators
+
+### Arithmetic operators
+These operators perform basic math operations.
+
+Example:
+```c
+int a = 10, b = 5;
+printf("%d\n", a + b);
+```
+
+### Assignment operators
+These operators assign values to variables.
+
+Example:
+```c
+int x = 10;
+x += 5;
+```
+
+### Relational operators
+These compare two values.
+
+Example:
+```c
+int a = 5, b = 3;
+printf("%d\n", a > b);
+```
+
+### Logical operators
+These combine conditions.
+
+Example:
+```c
+int a = 5, b = 3;
+printf("%d\n", a > 2 && b < 10);
+```
+
+### Bitwise operators
+These work on bits of numbers.
+
+Example:
+```c
+int a = 5, b = 3;
+printf("%d\n", a & b);
+```
+
+### Increment and decrement
+These increase or decrease a value by 1.
+
+Example:
+```c
+int x = 5;
+x++;
+```
+
+### Ternary operator
+This is a short form of if-else.
+
+Example:
+```c
+int age = 20;
+(age >= 18) ? printf("Adult") : printf("Minor");
+```
+
+---
+
+## 04 - Decision Making
+
+### if statement
+An if statement runs code only when a condition is true.
+
+Example:
+```c
+int age = 20;
+if (age >= 18) {
+    printf("Adult\n");
+}
+```
+
+### if-else statement
+It runs one block of code for true and another for false.
+
+Example:
+```c
+int marks = 40;
+if (marks >= 40) {
+    printf("Pass\n");
+} else {
+    printf("Fail\n");
+}
+```
+
+### else-if ladder
+It checks multiple conditions one by one.
+
+### Nested if
+A nested if is an if inside another if.
+
+### switch case
+Switch case is used when there are many choices.
+
+Example:
+```c
+int day = 2;
+switch (day) {
+    case 1: printf("Monday\n"); break;
+    case 2: printf("Tuesday\n"); break;
+    default: printf("Other\n");
+}
+```
+
+---
+
+## 05 - Loops
+
+### for loop
+A for loop repeats code a fixed number of times.
+
+Example:
+```c
+for (int i = 1; i <= 3; i++) {
+    printf("%d\n", i);
+}
+```
+
+### while loop
+A while loop repeats code while a condition is true.
+
+Example:
+```c
+int i = 1;
+while (i <= 3) {
+    printf("%d\n", i);
+    i++;
+}
+```
+
+### do-while loop
+A do-while loop runs at least once before checking the condition.
+
+### Pattern programs
+Patterns are made by printing characters or numbers in loops.
+
+---
+
+## 06 - Functions
+
+### Function
+A function is a block of code that performs a task.
+
+Example:
+```c
+#include <stdio.h>
+
+void greet() {
+    printf("Hello!\n");
+}
+
+int main() {
+    greet();
+    return 0;
+}
+```
+
+### Recursion
+Recursion is when a function calls itself.
+
+Example:
+```c
+int fact(int n) {
+    if (n == 1) return 1;
+    return n * fact(n - 1);
+}
+```
+
+---
+
+## 07 - Arrays
+
+### Array
+An array stores multiple values of the same type in one variable.
+
+Example:
+```c
+int marks[3] = {80, 90, 70};
+printf("%d\n", marks[1]);
+```
+
+### One-dimensional array
+A one-dimensional array stores values in a single list.
+
+### Two-dimensional array
+A two-dimensional array stores values in rows and columns.
+
+### Array sum and average
+These programs calculate the total and average of array elements.
+
+Example:
+```c
+int arr[5] = {10, 20, 30, 40, 50};
+int sum = 0;
+for (int i = 0; i < 5; i++) {
+    sum += arr[i];
+}
+printf("Sum = %d\n", sum);
+```
+
+### Linear search
+Linear search checks elements one by one until the target is found.
+
+---
+
+## 08 - Strings
+
+### String
+A string is a sequence of characters used to store text.
+
+Example:
+```c
+char name[] = "Kyma";
+printf("%s\n", name);
+```
+
+### String declaration and initialization
+A string can be declared and initialized directly.
+
+### String input and output
+Strings can be input and printed using scanf and printf.
+
+Example:
+```c
+char name[20];
+scanf("%s", name);
+printf("Hello %s\n", name);
+```
+
+### String length
+The length of a string means how many characters it contains.
+
+Example:
+```c
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char name[] = "Kyma";
+    printf("Length = %d\n", strlen(name));
+    return 0;
+}
+```
+
+### String compare, copy, concatenate, and reverse
+These operations help us work with text in C.
+
+Example:
+```c
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char a[] = "Hello";
+    char b[] = "World";
+    strcat(a, b);
+    printf("%s\n", a);
+    return 0;
+}
+```
+
+---
+
+## Summary
+
+C programming starts with basics like variables, input/output, and control flow. Once you understand these topics, you can build programs using loops, functions, arrays, and strings.
+
+Happy learning!
